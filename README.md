@@ -10,15 +10,15 @@
 
 3. 构建镜像，版本可以随意；
 
-        docker build -t video-server:1.5.1 .
+        docker build -t video-server:1.0.0 .
 
 4.  创建`video-server`容器：
 
         docker run -d \
-            --name=video \
+            --name=video-server \
             --restart unless-stopped \
             -p 8099:80 \
-            -v test/video:/var/www/html \
+            -v $(pwd)/test:/var/www/html \
             -e TZ="Asia/Shanghai" \
             video-server:1.0.0
 
