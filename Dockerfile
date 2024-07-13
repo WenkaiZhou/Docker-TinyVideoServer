@@ -11,6 +11,7 @@ RUN set -x ; \
 # Install packages and remove default server definition
 RUN apk --no-cache add \
   bash \
+  curl \
   nginx \
   tzdata \
   supervisor
@@ -39,4 +40,4 @@ EXPOSE 80
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf", "-u", "www-data"]
 
 # Configure a healthcheck to validate that everything is up&running
-HEALTHCHECK --timeout=30s CMD curl --silent --fail http://127.0.0.1
+HEALTHCHECK --timeout=30s CMD curl --silent --fail http://127.0.0.1/
