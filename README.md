@@ -29,4 +29,4 @@
 
 5. 访问站点，`your_server_IP:8099/index.html`;
 
-<img src="https://raw.githubusercontent.com/WenkaiZhou/Docker-TinyVideoServer/master/test.jpg" width="500" />
+<img src="https://github.com/WenkaiZhou/Docker-TinyVideoServer/blob/main/test.jpg?raw=true" width="500" />
